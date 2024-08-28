@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    color: #48556A;
+    background-color: #ECF2F8;
+}
+
+/* Main Body */
+main {
+    margin: 0 auto;
+    /* height: 100vh; */
+    font-size: 13px;
+}
+
+.card {
+    background-color: aquamarine;
+    margin-bottom: 20px;
+    padding: 2.5em 2em;
+    max-width: 375px;
+    border-radius: 8px;
+}
+
+.card img {
+    border-radius: 50%;
+    border: 2px solid #A775F1;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    margin-right: 1.25em;
+}
+
+.card-one {
+    position: relative;
+    background-color: #733FC8;
+}
+
+.card-two {
+    background-color: #48556A;
+    /* border: red; */
+}
+
+.card-three,
+.card-five {
+    background-color: #ffffff;
+
+}
+.card-four {
+ background-color: #19202D;   
+}
+
+.card-two.card img,
+.card-three.card img {
+    border: none;
+}
+
+.header-img {
+    background: url(/images/bg-pattern-quotation.svg);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    z-index: 1;
+}
+
+/* Profile */
+.profile {
+    display: flex;
+    margin-bottom: 1em;
+}
+.h3-text {
+    position: relative;
+    z-index: 999;
+}
+
+/* Typography */
+.text-white {
+    color: #ffffff;
+}
+.text-cf {
+    color: #cfcfcf;
+}
+
+.text-gray {
+    color: #48556A;
+}
+
+.verified {
+    font-size: 0.7rem;
+    color: #ffffff;
+    opacity: 50%;
+}
+.verified-gray{
+    font-size: 0.7rem;
+    color: #48556A;
+    opacity: 50%;
+}
+
+
+.card-quotes {
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: normal;
+    opacity: 70%;
+    max-width: 45ch;
+}
+h3 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.538rem;
+    margin-bottom: 1em;
+}
+
+.opacity-seventy {
+    opacity: 70%;
+    color: #ffffff;
+}
+/**********  768px DESIGN **********/
+@media screen and (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        max-width: 1000px;
+        margin: 100px auto;
+        padding: 20px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px;
+        grid-template-areas: 
+        'card-one card-one card-two card-five'
+        'card-three card-four card-four card-five';
+    }
+    .card {
+        margin-bottom: 10px;
+        padding: 1.5em 2em;
+        max-width: fit-content;
+    
+    } 
+    .card-quotes {
+        max-width: fit-content;
+    }
+    .card-one {
+        grid-area: card-one;
+        width: fit-content;
+       
+    }
+    .card-two {
+        grid-area: card-two;
+    
+    }
+    .card-three {
+        grid-area: card-three;
+       
+    }
+    .card-four {
+        grid-area: card-four;
+    
+    }
+    .card-five {
+        grid-area: card-five;
+     
+    }
+   
+} 
+
+/**********  DESKTOP DESIGN **********/
+@media screen and (min-width: 1024px) {
+    .grid-container {
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* grid-template-rows: repeat(3, 1fr); */
+        grid-template-areas: 
+        'card-one card-one card-two card-five'
+        'card-three card-four card-four card-five';
+        gap: 20px;
+    }
+   
+    
+    .card-one {
+        grid-area: card-one;
+      
+    }
+    .card-two {
+        grid-area: card-two;
+        
+    }
+
+    .card-five {
+        grid-area: card-five;
+       
+    }
+    .card-three {
+        grid-area: card-three;
+       
+    }
+    .card-four {
+        grid-area: card-four;
+    
+    }
+
+}
